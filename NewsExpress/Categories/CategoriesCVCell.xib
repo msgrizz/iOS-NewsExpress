@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Optima.ttc">
+            <string>Optima-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CategoriesCVCell" customModule="NewsExpress" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqA-Wu-0yt">
+                        <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="Z7O-Ow-mUA">
+                                <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6VN-1N-6Qk">
+                                <rect key="frame" x="0.0" y="285" width="400" height="115"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFQ-KL-TOP">
+                                        <rect key="frame" x="5" y="0.0" width="395" height="115"/>
+                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="12"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="6VN-1N-6Qk" secondAttribute="height" multiplier="80:23" id="4dn-X5-7mH"/>
+                                    <constraint firstItem="wFQ-KL-TOP" firstAttribute="leading" secondItem="6VN-1N-6Qk" secondAttribute="leading" constant="5" id="Ij5-g9-Fmm"/>
+                                    <constraint firstItem="wFQ-KL-TOP" firstAttribute="top" secondItem="6VN-1N-6Qk" secondAttribute="top" id="ZaX-io-o9s"/>
+                                    <constraint firstAttribute="trailing" secondItem="wFQ-KL-TOP" secondAttribute="trailing" id="acS-OJ-U8X"/>
+                                    <constraint firstAttribute="bottom" secondItem="wFQ-KL-TOP" secondAttribute="bottom" id="nT0-OA-acH"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Z7O-Ow-mUA" secondAttribute="bottom" id="2EA-Bi-fne"/>
+                            <constraint firstItem="6VN-1N-6Qk" firstAttribute="leading" secondItem="cqA-Wu-0yt" secondAttribute="leading" id="4gd-2S-uI6"/>
+                            <constraint firstAttribute="bottom" secondItem="6VN-1N-6Qk" secondAttribute="bottom" id="7hk-PA-nTD"/>
+                            <constraint firstAttribute="trailing" secondItem="Z7O-Ow-mUA" secondAttribute="trailing" id="Srd-HI-ucI"/>
+                            <constraint firstItem="Z7O-Ow-mUA" firstAttribute="leading" secondItem="cqA-Wu-0yt" secondAttribute="leading" id="gvT-oR-79Q"/>
+                            <constraint firstAttribute="trailing" secondItem="6VN-1N-6Qk" secondAttribute="trailing" id="mQB-Hj-yLi"/>
+                            <constraint firstItem="Z7O-Ow-mUA" firstAttribute="top" secondItem="cqA-Wu-0yt" secondAttribute="top" id="nk9-Ug-E8P"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cqA-Wu-0yt" secondAttribute="trailing" id="68W-wM-pAB"/>
+                <constraint firstItem="cqA-Wu-0yt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="QXg-bP-tJY"/>
+                <constraint firstItem="cqA-Wu-0yt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="XZ0-n9-5D2"/>
+                <constraint firstAttribute="bottom" secondItem="cqA-Wu-0yt" secondAttribute="bottom" id="dIa-3E-YhF"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="301" height="295"/>
+            <connections>
+                <outlet property="cardView" destination="cqA-Wu-0yt" id="VJL-WC-SXN"/>
+                <outlet property="imgCategories" destination="Z7O-Ow-mUA" id="78s-cQ-5jK"/>
+                <outlet property="lblCategoriesName" destination="wFQ-KL-TOP" id="x8c-Id-6gV"/>
+                <outlet property="viewLblBack" destination="6VN-1N-6Qk" id="0mi-IU-w5L"/>
+            </connections>
+            <point key="canvasLocation" x="-126" y="-8"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="default" width="900" height="450"/>
+    </resources>
+</document>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Optima.ttc">
+            <string>Optima-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CategoriesVC" customModule="NewsExpress" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionViewCategories" destination="tCn-2L-Fw9" id="d6V-yr-9DE"/>
+                <outlet property="imgCancel" destination="FOQ-tf-S8o" id="UAy-zj-vMY"/>
+                <outlet property="lblNavBarTitle" destination="pfh-gc-eI7" id="gdQ-nr-Bff"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewNavBar" destination="Iok-Fw-zZr" id="yV8-XW-4Zg"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="tCn-2L-Fw9">
+                    <rect key="frame" x="0.0" y="70" width="414" height="666"/>
+                    <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="9Ai-Si-tf6">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="50" height="50"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iok-Fw-zZr">
+                    <rect key="frame" x="0.0" y="20" width="414" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CATEGORIES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfh-gc-eI7">
+                            <rect key="frame" x="154.66666666666666" y="14.666666666666664" width="104.99999999999997" height="22"/>
+                            <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vPm-it-wp5">
+                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="vPm-it-wp5" secondAttribute="height" multiplier="1:1" id="JQg-b6-1l3"/>
+                            </constraints>
+                            <connections>
+                                <action selector="tapCancelBtn:" destination="-1" eventType="touchUpInside" id="FQG-58-H7v"/>
+                            </connections>
+                        </button>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cancel-white" translatesAutoresizingMaskIntoConstraints="NO" id="FOQ-tf-S8o">
+                            <rect key="frame" x="10.333333333333336" y="10.333333333333332" width="30" height="29.999999999999996"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="99h-af-rre"/>
+                                <constraint firstAttribute="width" secondItem="FOQ-tf-S8o" secondAttribute="height" multiplier="1:1" id="AaI-Jr-Oje"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Iok-Fw-zZr" secondAttribute="height" multiplier="207:25" id="6hp-sp-NyP"/>
+                        <constraint firstItem="FOQ-tf-S8o" firstAttribute="centerX" secondItem="vPm-it-wp5" secondAttribute="centerX" id="CcV-Om-drQ"/>
+                        <constraint firstItem="vPm-it-wp5" firstAttribute="leading" secondItem="Iok-Fw-zZr" secondAttribute="leading" id="MPB-cj-pA5"/>
+                        <constraint firstItem="vPm-it-wp5" firstAttribute="top" secondItem="Iok-Fw-zZr" secondAttribute="top" id="OiR-eC-O54"/>
+                        <constraint firstAttribute="bottom" secondItem="vPm-it-wp5" secondAttribute="bottom" id="bRu-cK-sSi"/>
+                        <constraint firstItem="pfh-gc-eI7" firstAttribute="centerY" secondItem="Iok-Fw-zZr" secondAttribute="centerY" id="mKF-aK-bpv"/>
+                        <constraint firstItem="pfh-gc-eI7" firstAttribute="centerX" secondItem="Iok-Fw-zZr" secondAttribute="centerX" id="wyT-tn-pgl"/>
+                        <constraint firstItem="FOQ-tf-S8o" firstAttribute="centerY" secondItem="vPm-it-wp5" secondAttribute="centerY" id="zp1-PF-o6k"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="tCn-2L-Fw9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="4qo-bU-lyY"/>
+                <constraint firstItem="Iok-Fw-zZr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="EfC-iJ-myQ"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="tCn-2L-Fw9" secondAttribute="bottom" id="Fv8-Tj-Gmg"/>
+                <constraint firstItem="Iok-Fw-zZr" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="NxW-8u-7IF"/>
+                <constraint firstItem="tCn-2L-Fw9" firstAttribute="top" secondItem="Iok-Fw-zZr" secondAttribute="bottom" id="dQc-0b-xVt"/>
+                <constraint firstItem="Iok-Fw-zZr" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="q8f-7B-Kam"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tCn-2L-Fw9" secondAttribute="trailing" id="to9-ds-FwA"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cancel-white" width="96" height="96"/>
+    </resources>
+</document>

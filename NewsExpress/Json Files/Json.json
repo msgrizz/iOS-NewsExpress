@@ -1,0 +1,127 @@
+
+{
+    "status": "ok",
+    "totalResults": 10,
+    "articles": [
+                 {
+                 "source": {
+                    "id": "the-hindu",
+                    "name": "The Hindu"
+                 },
+                 "author": "PTI",
+                 "title": "India refuses to endorse China’s Belt and Road Initiative",
+                 "description": "In his address at the Shanghai Cooperation Organisation Summit, Prime Minister Narendra Modi said any mega connectivity project must respect sovereignty and territorial integrity.",
+                 "url": "http://www.thehindu.com/news/national/india-refuses-to-endorse-chinas-belt-and-road-initiative/article24128902.ece",
+                 "urlToImage": "http://www.thehindu.com/news/national/vudzet/article24128901.ece/ALTERNATES/LANDSCAPE_615/00015S0CB",
+                 "publishedAt": "2018-06-10T12:52:05Z"
+                 },
+                 {
+                 "source": {
+                    "id": "the-hindu",
+                    "name": "The Hindu"
+                 },
+                 "author": "Reuters",
+                 "title": "Trump arrives in Singapore ahead of unprecedented US-North Korea summit",
+                 "description": "The U.S. President is looking to lay the groundwork for a nuclear deal with one of America’s most bitter long-time foes",
+                 "url": "http://www.thehindu.com/news/international/donald-trump-arrives-in-singapore-ahead-of-unprecedented-us-north-korea-summit/article24128887.ece",
+                 "urlToImage": "http://www.thehindu.com/news/international/g2ztrl/article24128886.ece/ALTERNATES/LANDSCAPE_615/THJVNNORTHKOREA-USATRUMP-ARRIVAL",
+                 "publishedAt": "2018-06-10T12:51:14Z"
+                 },
+                 {
+                "source": {
+                    "id": "the-hindu",
+                    "name": "The Hindu"
+                 },
+                 "author": "PTI",
+                 "title": "NIA ex-chief Sharad Kumar appointed vigilance commissioner",
+                 "description": "The Central Vigilance Commission post was lying vacant since February. At present, K.V. Chowdary is the Central Vigilance Commissioner and T.M. Bhasin is the other vigilance commissioner.",
+                 "url": "http://www.thehindu.com/news/national/nia-ex-chief-sharad-kumar-appointed-vigilance-commissioner/article24128640.ece",
+                 "urlToImage": "http://www.thehindu.com/news/national/2kvyqy/article24128639.ece/ALTERNATES/LANDSCAPE_615/Sharad",
+                 "publishedAt": "2018-06-10T11:50:07Z"
+                 },
+                 {
+                 "source": {
+                    "id": "the-hindu",
+                    "name": "The Hindu"
+                 },
+                 "author": "PTI",
+                 "title": "Bangladesh beat India in women’s Asia Cup final",
+                 "description": "",
+                 "url": "http://www.thehindu.com/sport/cricket/bangladesh-beat-india-in-womens-asia-cup-final/article24128245.ece",
+                 "urlToImage": "http://www.thehindu.com/sport/cricket/mmgz26/article24128332.ece/ALTERNATES/LANDSCAPE_615/bangtrophyjpg",
+                 "publishedAt": "2018-06-10T10:16:51Z"
+                 },
+                 {
+                 "source": {
+                    "id": "the-hindu",
+                    "name": "The Hindu"
+                 },
+                 "author": "Peerzada Ashiq",
+                 "title": "Five militants killed in Kupwara: Army",
+                 "description": "Thr Army said it foiled an infiltration bid along the Line of Control",
+                 "url": "http://www.thehindu.com/news/national/other-states/five-militants-killed-in-kupwara-army/article24127694.ece",
+                 "urlToImage": "http://www.thehindu.com/news/national/dk5uq/article23997184.ece/ALTERNATES/LANDSCAPE_615/MILITANTS",
+                 "publishedAt": "2018-06-10T06:38:36Z"
+                 },
+                 {
+                 "source": {
+                    "id": "the-hindu",
+                    "name": "The Hindu"
+                 },
+                 "author": "The Hindu Net Desk",
+                 "title": "IIT JEE 2018 results declared, Panchkula boy secures top rank",
+                 "description": "A total of 18,138 candidates scored above the cut-off",
+                 "url": "http://www.thehindu.com/news/national/iit-jee-2018-results-declared-panchkula-boy-secures-top-rank/article24127595.ece",
+                 "urlToImage": "http://www.thehindu.com/news/cities/Hyderabad/kx2pg3/article23947867.ece/ALTERNATES/LANDSCAPE_615/07EPBSIIT-JEEG1R3U0U8D3jpgjpg",
+                 "publishedAt": "2018-06-10T05:40:39Z"
+                 },
+                 {
+                 "source": {
+                    "id": "the-hindu",
+                    "name": "The Hindu"
+                 },
+                 "author": "Tabish Khair",
+                 "title": "The Age of Perversion",
+                 "description": "We exist in a world where capital has become an obsession. And we are the perverts of free-floating ‘god-like’ capital",
+                 "url": "http://www.thehindu.com/opinion/op-ed/the-age-of-perversion/article24124684.ece",
+                 "urlToImage": "http://www.thehindu.com/opinion/op-ed/t2js1g/article24124682.ece/ALTERNATES/LANDSCAPE_615/9thlies",
+                 "publishedAt": "2018-06-09T18:32:00Z"
+                 },
+                 {
+                 "source": {
+                    "id": "the-hindu",
+                    "name": "The Hindu"
+                 },
+                 "author": "G Anand",
+                 "title": "Poachers play deadly ivory game in Kerala forests",
+                 "description": "13 kg of elephant teeth and ivory artefacts seized, exposing resurgent trade linking Thiruvananthapuram and Kolkata",
+                 "url": "http://www.thehindu.com/news/national/poachers-play-deadly-ivory-game-in-kerala-forests/article24125329.ece",
+                 "urlToImage": "http://www.thehindu.com/news/national/529a4w/article24125328.ece/ALTERNATES/LANDSCAPE_615/PHOTO-2018-06-01-18-25-35",
+                 "publishedAt": "2018-06-09T18:16:24Z"
+                 },
+                 {
+                 "source": {
+                    "id": "the-hindu",
+                    "name": "The Hindu"
+                 },
+                 "author": "G. Sampath",
+                 "title": "Four years of Achhe Din",
+                 "description": "Our Prime Minister had only one request for us. We have let him down miserably",
+                 "url": "http://www.thehindu.com/opinion/op-ed/four-years-of-achhe-din/article24124697.ece",
+                 "urlToImage": "http://www.thehindu.com/opinion/op-ed/kjzahf/article24124695.ece/ALTERNATES/LANDSCAPE_615/9thleader",
+                 "publishedAt": "2018-06-09T17:38:19Z"
+                 },
+                 {
+                 "source": {
+                    "id": "the-hindu",
+                    "name": "The Hindu"
+                 },
+                 "author": "P. KRISHNA GOPINATH",
+                 "title": "Malana: The valley of cannabis",
+                 "description": "Once upon a time, a secret, hermit village. Today, the centre of a rag-tag tourism trade",
+                 "url": "http://www.thehindu.com/society/malana-the-valley-of-cannabis/article24114604.ece",
+                 "urlToImage": "http://www.thehindu.com/society/zb4s5a/article24114601.ece/ALTERNATES/LANDSCAPE_615/10SM1Malana4jpg",
+                 "publishedAt": "2018-06-09T11:00:00Z"
+                 }
+                 ]
+}
