@@ -29,6 +29,8 @@
 		FA95714920CB0F3B00EA7B7E /* NewsDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA95714720CB0F3B00EA7B7E /* NewsDetailVC.xib */; };
 		FAA1B1A820CDA1F500144474 /* CategoriesSectionCRV.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1B1A620CDA1F500144474 /* CategoriesSectionCRV.swift */; };
 		FAA1B1A920CDA1F500144474 /* CategoriesSectionCRV.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA1B1A720CDA1F500144474 /* CategoriesSectionCRV.xib */; };
+		FAA2697020DE3B3100B5DFE3 /* NewsExpressDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA2696E20DE3B3100B5DFE3 /* NewsExpressDB.xcdatamodeld */; };
+		FAA2697220DE3B8A00B5DFE3 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2697120DE3B8A00B5DFE3 /* DatabaseController.swift */; };
 		FAE4AAD520CBC4F100E06B2A /* CellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4AAD420CBC4F100E06B2A /* CellAnimator.swift */; };
 		FAE4AAD720CBC85C00E06B2A /* ImageViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4AAD620CBC85C00E06B2A /* ImageViewShadow.swift */; };
 		FAE4AAD920CBD15E00E06B2A /* TextToSpeechConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4AAD820CBD15E00E06B2A /* TextToSpeechConverter.swift */; };
@@ -145,6 +147,8 @@
 		FA95714720CB0F3B00EA7B7E /* NewsDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsDetailVC.xib; sourceTree = "<group>"; };
 		FAA1B1A620CDA1F500144474 /* CategoriesSectionCRV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesSectionCRV.swift; sourceTree = "<group>"; };
 		FAA1B1A720CDA1F500144474 /* CategoriesSectionCRV.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesSectionCRV.xib; sourceTree = "<group>"; };
+		FAA2696F20DE3B3100B5DFE3 /* NewsExpressDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewsExpressDB.xcdatamodel; sourceTree = "<group>"; };
+		FAA2697120DE3B8A00B5DFE3 /* DatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
 		FAE4AAD420CBC4F100E06B2A /* CellAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellAnimator.swift; sourceTree = "<group>"; };
 		FAE4AAD620CBC85C00E06B2A /* ImageViewShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewShadow.swift; sourceTree = "<group>"; };
 		FAE4AAD820CBD15E00E06B2A /* TextToSpeechConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechConverter.swift; sourceTree = "<group>"; };
@@ -278,6 +282,15 @@
 			path = More;
 			sourceTree = "<group>";
 		};
+		FA3A5D9820E0292100194000 /* LocalDB */ = {
+			isa = PBXGroup;
+			children = (
+				FAA2696E20DE3B3100B5DFE3 /* NewsExpressDB.xcdatamodeld */,
+				FAA2697120DE3B8A00B5DFE3 /* DatabaseController.swift */,
+			);
+			path = LocalDB;
+			sourceTree = "<group>";
+		};
 		FA45B1DD20CD45BE00D222B8 /* Stocks */ = {
 			isa = PBXGroup;
 			children = (
@@ -380,6 +393,7 @@
 		FAFD91E220C4446000787CE1 /* NewsExpress */ = {
 			isa = PBXGroup;
 			children = (
+				FA3A5D9820E0292100194000 /* LocalDB */,
 				FA45B1F420CD794600D222B8 /* Json Files */,
 				FAFD928320C44E1100787CE1 /* Application */,
 				FAFD921420C445D500787CE1 /* SHRestClient */,
@@ -831,8 +845,10 @@
 				FAF07B9720C8533100D080A1 /* HomeVC+API.swift in Sources */,
 				FAFD923420C446D100787CE1 /* NSDictionary+Utility.swift in Sources */,
 				FAE4AADB20CC16BD00E06B2A /* MyDateFormatConverter.swift in Sources */,
+				FAA2697220DE3B8A00B5DFE3 /* DatabaseController.swift in Sources */,
 				FA45B1E120CD45E300D222B8 /* QuoteVC.swift in Sources */,
 				FAFD923520C446D100787CE1 /* String+Utility.swift in Sources */,
+				FAA2697020DE3B3100B5DFE3 /* NewsExpressDB.xcdatamodeld in Sources */,
 				FA0A177020CD22B60057EB73 /* MoreVC.swift in Sources */,
 				FAFD922420C446BA00787CE1 /* FontWrap.swift in Sources */,
 				FAF07B9420C8528D00D080A1 /* HomeVC.swift in Sources */,
@@ -1175,6 +1191,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FAA2696E20DE3B3100B5DFE3 /* NewsExpressDB.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FAA2696F20DE3B3100B5DFE3 /* NewsExpressDB.xcdatamodel */,
+			);
+			currentVersion = FAA2696F20DE3B3100B5DFE3 /* NewsExpressDB.xcdatamodel */;
+			path = NewsExpressDB.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FAFD91D820C4446000787CE1 /* Project object */;
 }
