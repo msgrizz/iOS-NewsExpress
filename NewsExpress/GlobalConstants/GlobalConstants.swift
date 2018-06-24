@@ -10,7 +10,7 @@ import Foundation
 
 enum GlobalConstants {
     static let baseUrl = "https://newsapi.org/v2/"
-    static let apiKey = "71a951f960234350abbd37d823e4ee4d"
+    static let apiKey = "b74b17391266429d846c1d4d6c29299e"
     static let basePath = ""
 }
 

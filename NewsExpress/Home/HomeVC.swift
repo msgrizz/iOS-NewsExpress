@@ -14,10 +14,9 @@ class HomeVC: UIViewController {
     
     @IBOutlet weak var collectionViewHome: UICollectionView!
     
-    //    var arrNewsData = [News]()
-    var arrNewsData = [NewsUpdates]()
+    var arrNewsData = [News]()
     
-//    let navMenu = NavigationPanelVC.sharedInstance
+    //    let navMenu = NavigationPanelVC.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,12 +28,7 @@ class HomeVC: UIViewController {
         
         self.collectionViewHome.register(UINib(nibName: "HomeCVCellBig", bundle: .main), forCellWithReuseIdentifier: "HomeCVCellBig")
         
-        
-        self.parseData()
-        
-//        self.navMenu.setParent(self, onCompletion: { (indexpath) in
-        
-//        })
+        self.setData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -43,80 +37,18 @@ class HomeVC: UIViewController {
         //self.navMenu.reloadData()
     }
     
-    //    func setData() {
-    //        self.callTopHeadlines(params: [:]) { (newsList) in
-    //            self.arrNewsData.removeAll()
-    //            self.arrNewsData = newsList
-    //            print(self.arrNewsData)
-    //        }
-    //    }
-    
-    func parseData() {
+    func setData() {
         
-        arrNewsData = []
-        let url = "https://newsapi.org/v2/top-headlines?country=us&apiKey=71a951f960234350abbd37d823e4ee4d"
-        Alamofire.request(url, method: .get)
-            .responseJSON { response in
-                print(response.result.value ?? "")
-                if let JSON = response.result.value as? [String: Any] {
-                    
-                    if let fetchedData = JSON["articles"] as? NSArray as! [[String : Any]]? {
-                        //print(fetchedData)
-                        
-                        for each in fetchedData {
-                            let topHeadline = each
-                            
-                            var author: String?
-                            if (topHeadline["author"] as? String) != nil {
-                                author = topHeadline["author"] as? String
-                            } else {
-                                author = "NA"
-                            }
-                            
-                            var title: String?
-                            if((topHeadline["title"] as? String) != nil) {
-                                title = topHeadline["title"] as? String
-                            } else {
-                                title = "NA"
-                            }
-                            
-                            var description: String?
-                            if (topHeadline["description"] as? String) != nil {
-                                description = topHeadline["description"] as? String
-                            } else {
-                                description = "NA"
-                            }
-                            
-                            var url: String?
-                            if((topHeadline["url"] as? String) != nil) {
-                                url = topHeadline["url"] as? String
-                            } else {
-                                url = "NA"
-                            }
-                            
-                            var publishedAt: String?
-                            if((topHeadline["publishedAt"] as? String) != nil) {
-                                publishedAt = topHeadline["publishedAt"] as? String
-                            } else {
-                                publishedAt = "NA"
-                            }
-                            
-                            var urlToImage: String?
-                            if((topHeadline["urlToImage"] as? String) != nil) {
-                                urlToImage = topHeadline["urlToImage"] as? String
-                            } else {
-                                urlToImage = "NA"
-                            }
-                            
-                            self.arrNewsData.append(NewsUpdates(author: author!, title: title!, description: description!, url: url!, urlToImage: urlToImage!, publishedAt: publishedAt!))
-                        }
-                        //print(self.arrNewsData)
-                    }
-                    //                    if(self.fetchedNews.count > 0){
-                    //                        self.activityIndicatorView.stopAnimating()
-                    //                    }
-                    self.collectionViewHome.reloadData()
-                }
+        let param = [
+            "country": "us",
+            "category": "business",
+            "apiKey": GlobalConstants.apiKey
+        ]
+        self.callTopHeadlines(params: param) { (newsList) in
+            self.arrNewsData.removeAll()
+            self.arrNewsData = newsList
+            //print(self.arrNewsData)
+            self.collectionViewHome.reloadData()
         }
     }
     
@@ -172,12 +104,12 @@ extension HomeVC: UICollectionViewDataSource {
             bigCell.lblTitleNews.text = self.arrNewsData[0].title
             
             let publishedAt = self.arrNewsData[0].publishedAt
-            bigCell.lblTitlePublishedDate.text = self.dateFormatChange(yourdate: publishedAt!, currentFormat: "yyyy-MM-dd'T'HH:mm:ssZ", requiredFormat: "dd MMM yyyy, hh:mm a")
+            bigCell.lblTitlePublishedDate.text = self.dateFormatChange(yourdate: publishedAt, currentFormat: "yyyy-MM-dd'T'HH:mm:ssZ", requiredFormat: "dd MMM yyyy, hh:mm a")
             
             let imgURL = self.arrNewsData[0].urlToImage
             bigCell.imageNews.sd_setShowActivityIndicatorView(true)
             bigCell.imageNews.sd_setIndicatorStyle(.gray)
-            bigCell.imageNews.sd_setImage(with: URL(string: imgURL!), placeholderImage: #imageLiteral(resourceName: "default"), options:.refreshCached)
+            bigCell.imageNews.sd_setImage(with: URL(string: imgURL), placeholderImage: #imageLiteral(resourceName: "default"), options:.refreshCached)
             
             return bigCell
         } else {
@@ -190,12 +122,12 @@ extension HomeVC: UICollectionViewDataSource {
             
             let publishedAt = self.arrNewsData[indexPath.item].publishedAt
             
-            smallCell.lblTitlePublishedDate.text = self.dateFormatChange(yourdate: publishedAt!, currentFormat: "yyyy-MM-dd'T'HH:mm:ssZ", requiredFormat: "dd MMM yyyy, hh:mm a")
+            smallCell.lblTitlePublishedDate.text = self.dateFormatChange(yourdate: publishedAt, currentFormat: "yyyy-MM-dd'T'HH:mm:ssZ", requiredFormat: "dd MMM yyyy, hh:mm a")
             
-            let imgURL = self.arrNewsData[indexPath.item].urlToImage?.trim()
+            let imgURL = self.arrNewsData[indexPath.item].urlToImage.trim()
             smallCell.imageNews.sd_setShowActivityIndicatorView(true)
             smallCell.imageNews.sd_setIndicatorStyle(.gray)
-            smallCell.imageNews.sd_setImage(with: URL(string: imgURL!), placeholderImage: #imageLiteral(resourceName: "default"), options:.refreshCached)
+            smallCell.imageNews.sd_setImage(with: URL(string: imgURL), placeholderImage: #imageLiteral(resourceName: "default"), options:.refreshCached)
             
             smallCell.imageNews.layer.cornerRadius = 3.0
             

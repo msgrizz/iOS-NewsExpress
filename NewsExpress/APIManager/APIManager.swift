@@ -12,11 +12,13 @@ class APIManager: NSObject {
     
     class func getNewsList( params: [String: String], success: @escaping (_ newsList: [News])->(), failure: @escaping (_ errorMessage: String)->()) {
         
-        let url = GlobalConstants.baseUrl + "top-headlines?country=us&" + GlobalConstants.apiKey
+        let url = "https://newsapi.org/v2/top-headlines?"
         
         let restClient = SHRestClient(url: url)
         
         restClient.get(parameters: params, headers: nil, success: { (data, response) in
+            
+            print(data ?? "")
             
             if let object = data as? [String: Any] {
                 if object["status"] as? String == "ok" {

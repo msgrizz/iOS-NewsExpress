@@ -51,23 +51,3 @@ struct Source {
         self.name = name
     }
 }
-
-class NewsUpdates {
-    
-    var author : String?
-    var title : String?
-    var description : String?
-    var url: String?
-    var urlToImage: String?
-    var publishedAt: String?
-    
-    init(author: String, title: String, description: String, url: String, urlToImage: String, publishedAt : String) {
-        
-        self.author = author
-        self.title = title
-        self.description = description
-        self.url = url
-        self.urlToImage = urlToImage
-        self.publishedAt = publishedAt
-    }
-}
