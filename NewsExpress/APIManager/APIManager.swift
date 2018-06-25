@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Toaster
 
 class APIManager: NSObject {
     
@@ -17,8 +18,6 @@ class APIManager: NSObject {
         let restClient = SHRestClient(url: url)
         
         restClient.get(parameters: params, headers: nil, success: { (data, response) in
-            
-            print(data ?? "")
             
             if let object = data as? [String: Any] {
                 if object["status"] as? String == "ok" {
@@ -42,6 +41,10 @@ class APIManager: NSObject {
             }
         }) { (type, error) in
             failure("Data cannot be parsed as JSON")
+            
+            let errorToast = Toast(text: "No Internet Connection", duration: 3.0)
+            errorToast.show()
+//            errorToast.view.backgroundColor = UIColor.red
         }
     }
 }

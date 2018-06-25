@@ -12,21 +12,29 @@ import SDWebImage
 
 class HomeVC: UIViewController {
     
-    @IBOutlet weak var collectionViewHome: UICollectionView!
+    @IBOutlet weak var viewMain: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var lblTopHeadlines: UILabel!
+    @IBOutlet weak var collectionViewForTopNews: UICollectionView!
+    
+    @IBOutlet weak var lblLetestNews: UILabel!
+    @IBOutlet weak var collectionViewForEverything: UICollectionView!
+
     var arrNewsData = [News]()
-    
-    //    let navMenu = NavigationPanelVC.sharedInstance
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.collectionViewHome.delegate = self
-        self.collectionViewHome.dataSource = self
+        self.collectionViewForTopNews.delegate = self
+        self.collectionViewForTopNews.dataSource = self
         
-        self.collectionViewHome.register(UINib(nibName: "HomeCVCell", bundle: .main), forCellWithReuseIdentifier: "HomeCVCell")
+        self.collectionViewForTopNews.register(UINib(nibName: "HomeCVCellBig", bundle: .main), forCellWithReuseIdentifier: "HomeCVCellBig")
+
+        self.collectionViewForEverything.delegate = self
+        self.collectionViewForEverything.dataSource = self
         
-        self.collectionViewHome.register(UINib(nibName: "HomeCVCellBig", bundle: .main), forCellWithReuseIdentifier: "HomeCVCellBig")
+        self.collectionViewForEverything.register(UINib(nibName: "HomeCVCell", bundle: .main), forCellWithReuseIdentifier: "HomeCVCell")
         
         self.setData()
     }
@@ -34,7 +42,6 @@ class HomeVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        //self.navMenu.reloadData()
     }
     
     func setData() {
@@ -48,12 +55,12 @@ class HomeVC: UIViewController {
             self.arrNewsData.removeAll()
             self.arrNewsData = newsList
             //print(self.arrNewsData)
-            self.collectionViewHome.reloadData()
+            self.collectionViewForTopNews.reloadData()
+            self.collectionViewForEverything.reloadData()
         }
     }
     
     @IBAction func tapCategoryBtn(_ sender: UIButton) {
-        //self.navMenu.toggleSlide()
         let vc = CategoriesVC(nibName: "CategoriesVC", bundle: nil)
         self.present(vc, animated: true, completion: nil)
     }
@@ -96,23 +103,30 @@ extension HomeVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        if indexPath.item == 0 {
+        if collectionView == self.collectionViewForTopNews {
+            
             guard let bigCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCVCellBig", for: indexPath) as? HomeCVCellBig else {
                 print("------- Big cell cannot be created")
                 return UICollectionViewCell()
             }
-            bigCell.lblTitleNews.text = self.arrNewsData[0].title
             
-            let publishedAt = self.arrNewsData[0].publishedAt
+            bigCell.layer.cornerRadius = 5.0
+            bigCell.layer.masksToBounds = true
+            
+            bigCell.lblTitleNews.text = self.arrNewsData[indexPath.item].title
+            
+            let publishedAt = self.arrNewsData[indexPath.item].publishedAt
             bigCell.lblTitlePublishedDate.text = self.dateFormatChange(yourdate: publishedAt, currentFormat: "yyyy-MM-dd'T'HH:mm:ssZ", requiredFormat: "dd MMM yyyy, hh:mm a")
             
-            let imgURL = self.arrNewsData[0].urlToImage
+            let imgURL = self.arrNewsData[indexPath.item].urlToImage
             bigCell.imageNews.sd_setShowActivityIndicatorView(true)
             bigCell.imageNews.sd_setIndicatorStyle(.gray)
-            bigCell.imageNews.sd_setImage(with: URL(string: imgURL), placeholderImage: #imageLiteral(resourceName: "default"), options:.refreshCached)
+            bigCell.imageNews.sd_setImage(with: URL(string: imgURL), placeholderImage: #imageLiteral(resourceName: "placeholderImage"), options:.refreshCached)
             
             return bigCell
-        } else {
+            
+        } else if collectionView == self.collectionViewForEverything {
+            
             guard let smallCell = collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCVCell", for: indexPath) as? HomeCVCell else {
                 print("------- Small cell cannot be created")
                 return UICollectionViewCell()
@@ -127,12 +141,14 @@ extension HomeVC: UICollectionViewDataSource {
             let imgURL = self.arrNewsData[indexPath.item].urlToImage.trim()
             smallCell.imageNews.sd_setShowActivityIndicatorView(true)
             smallCell.imageNews.sd_setIndicatorStyle(.gray)
-            smallCell.imageNews.sd_setImage(with: URL(string: imgURL), placeholderImage: #imageLiteral(resourceName: "default"), options:.refreshCached)
+            smallCell.imageNews.sd_setImage(with: URL(string: imgURL), placeholderImage: #imageLiteral(resourceName: "placeholderImage"), options:.refreshCached)
             
             smallCell.imageNews.layer.cornerRadius = 3.0
             
             return smallCell
         }
+        
+        return UICollectionViewCell()
     }
 }
 
@@ -150,19 +166,30 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        if indexPath.item == 0 {
-            return CGSize(width: UIScreen.main.bounds.width, height: UIScreen.main.bounds.width - 50.0)
+        
+        if collectionView == self.collectionViewForTopNews {
+            return CGSize(width: UIScreen.main.bounds.width - 50, height: 200.0)
         } else {
             return CGSize(width: UIScreen.main.bounds.width, height: 110.0)
         }
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+      
+        if collectionView == self.collectionViewForTopNews {
+            return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        } else {
+            return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        }
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 1.0
+       
+        if collectionView == self.collectionViewForTopNews {
+            return 5.0
+        } else {
+            return 2.0
+        }
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
