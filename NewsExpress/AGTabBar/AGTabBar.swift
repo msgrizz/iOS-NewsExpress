@@ -25,7 +25,7 @@ class AGTabBar: UITabBarController {
     
     func setupTabBar() {
         
-        UITabBar.appearance().tintColor = UIColor(hex: "5e5e5e")
+        UITabBar.appearance().tintColor = UIColor(hex: "424242")
         
         // Create Tab one
         let homeVC = HomeVC()
@@ -56,7 +56,7 @@ class AGTabBar: UITabBarController {
         }
         
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor(hex: "9e9e9e")], for: .normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor(hex: "5e5e5e")], for: .selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor(hex: "424242")], for: .selected)
     }
 }
 
