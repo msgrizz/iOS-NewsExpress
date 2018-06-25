@@ -20,7 +20,7 @@ class HomeVC: UIViewController {
     
     @IBOutlet weak var lblLetestNews: UILabel!
     @IBOutlet weak var collectionViewForEverything: UICollectionView!
-
+    
     var arrNewsData = [News]()
     
     override func viewDidLoad() {
@@ -42,6 +42,10 @@ class HomeVC: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
     }
     
     func setData() {
@@ -66,7 +70,9 @@ class HomeVC: UIViewController {
     }
     
     @IBAction func tapSearchBtn(_ sender: UIButton) {
-        showErrorAlert(title: "Sorry!", message: "Ayush didn't implement this feature yet.")
+        
+        let vc = SearchVC(nibName: "SearchVC", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {

@@ -31,6 +31,9 @@
 		FAA1B1A920CDA1F500144474 /* CategoriesSectionCRV.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA1B1A720CDA1F500144474 /* CategoriesSectionCRV.xib */; };
 		FAA2697020DE3B3100B5DFE3 /* NewsExpressDB.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAA2696E20DE3B3100B5DFE3 /* NewsExpressDB.xcdatamodeld */; };
 		FAA2697220DE3B8A00B5DFE3 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2697120DE3B8A00B5DFE3 /* DatabaseController.swift */; };
+		FAD0778620E13B4700F8C6FE /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD0778420E13B4700F8C6FE /* SearchVC.swift */; };
+		FAD0778720E13B4700F8C6FE /* SearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD0778520E13B4700F8C6FE /* SearchVC.xib */; };
+		FAD0778920E13F9B00F8C6FE /* SearchVC+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD0778820E13F9B00F8C6FE /* SearchVC+API.swift */; };
 		FAE4AAD520CBC4F100E06B2A /* CellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4AAD420CBC4F100E06B2A /* CellAnimator.swift */; };
 		FAE4AAD720CBC85C00E06B2A /* ImageViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4AAD620CBC85C00E06B2A /* ImageViewShadow.swift */; };
 		FAE4AAD920CBD15E00E06B2A /* TextToSpeechConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4AAD820CBD15E00E06B2A /* TextToSpeechConverter.swift */; };
@@ -149,6 +152,9 @@
 		FAA1B1A720CDA1F500144474 /* CategoriesSectionCRV.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesSectionCRV.xib; sourceTree = "<group>"; };
 		FAA2696F20DE3B3100B5DFE3 /* NewsExpressDB.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NewsExpressDB.xcdatamodel; sourceTree = "<group>"; };
 		FAA2697120DE3B8A00B5DFE3 /* DatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
+		FAD0778420E13B4700F8C6FE /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		FAD0778520E13B4700F8C6FE /* SearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchVC.xib; sourceTree = "<group>"; };
+		FAD0778820E13F9B00F8C6FE /* SearchVC+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchVC+API.swift"; sourceTree = "<group>"; };
 		FAE4AAD420CBC4F100E06B2A /* CellAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellAnimator.swift; sourceTree = "<group>"; };
 		FAE4AAD620CBC85C00E06B2A /* ImageViewShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewShadow.swift; sourceTree = "<group>"; };
 		FAE4AAD820CBD15E00E06B2A /* TextToSpeechConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechConverter.swift; sourceTree = "<group>"; };
@@ -354,6 +360,16 @@
 			path = "News Details";
 			sourceTree = "<group>";
 		};
+		FAD0778320E13B1200F8C6FE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				FAD0778420E13B4700F8C6FE /* SearchVC.swift */,
+				FAD0778520E13B4700F8C6FE /* SearchVC.xib */,
+				FAD0778820E13F9B00F8C6FE /* SearchVC+API.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
 		FAF07B9820C8674100D080A1 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -364,6 +380,7 @@
 				FAF07B9A20C8677F00D080A1 /* HomeCVCell.xib */,
 				FAF07B9D20C870A600D080A1 /* HomeCVCellBig.swift */,
 				FAF07B9E20C870A600D080A1 /* HomeCVCellBig.xib */,
+				FAD0778320E13B1200F8C6FE /* Search */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -711,6 +728,7 @@
 				FAA1B1A920CDA1F500144474 /* CategoriesSectionCRV.xib in Resources */,
 				FAFD929020C4739900787CE1 /* WelcomeScreenSecondVC.xib in Resources */,
 				FA95714920CB0F3B00EA7B7E /* NewsDetailVC.xib in Resources */,
+				FAD0778720E13B4700F8C6FE /* SearchVC.xib in Resources */,
 				FA45B1E220CD45E300D222B8 /* QuoteVC.xib in Resources */,
 				FA45B1E620CD45F800D222B8 /* StockVC.xib in Resources */,
 				FA45B1EF20CD555200D222B8 /* CategoriesCVCell.xib in Resources */,
@@ -834,6 +852,7 @@
 				FAFD926D20C44A4C00787CE1 /* LoadingOverlayLoader.swift in Sources */,
 				FAFD927620C44A4C00787CE1 /* NetworkHelper.swift in Sources */,
 				FA47CA9620D56270002723D3 /* ButtonAnimation+Extension.swift in Sources */,
+				FAD0778920E13F9B00F8C6FE /* SearchVC+API.swift in Sources */,
 				FAFD923D20C446D100787CE1 /* UIColor+Utility.swift in Sources */,
 				FA47CA9520D56270002723D3 /* Gradient+Extension.swift in Sources */,
 				FAFD921B20C445EE00787CE1 /* SHRestClient.swift in Sources */,
@@ -855,6 +874,7 @@
 				FAE4AAD720CBC85C00E06B2A /* ImageViewShadow.swift in Sources */,
 				FAFD922020C445EE00787CE1 /* SHRestClientCore.swift in Sources */,
 				FAFD929320C473A900787CE1 /* WelcomeScreenThirdVC.swift in Sources */,
+				FAD0778620E13B4700F8C6FE /* SearchVC.swift in Sources */,
 				FAFD923C20C446D100787CE1 /* CALayer+Storyboard.swift in Sources */,
 				FAFD926820C44A4C00787CE1 /* ButtonViewShadow.swift in Sources */,
 				FAFD926F20C44A4C00787CE1 /* TableViewShadow.swift in Sources */,
