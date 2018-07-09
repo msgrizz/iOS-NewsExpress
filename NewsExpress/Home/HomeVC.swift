@@ -12,6 +12,8 @@ import SDWebImage
 
 class HomeVC: UIViewController {
     
+    @IBOutlet weak var viewNav: UIView!
+    
     @IBOutlet weak var viewMain: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -22,21 +24,26 @@ class HomeVC: UIViewController {
     @IBOutlet weak var collectionViewForEverything: UICollectionView!
     
     var arrNewsData = [News]()
+    var newsData = News()
+    
+    var bookmarkNews = BookmarkNewsList()
+    var arrBookmarkNews = [BookmarkNewsList]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.setData()
         
         self.collectionViewForTopNews.delegate = self
         self.collectionViewForTopNews.dataSource = self
         
         self.collectionViewForTopNews.register(UINib(nibName: "HomeCVCellBig", bundle: .main), forCellWithReuseIdentifier: "HomeCVCellBig")
-
+        
         self.collectionViewForEverything.delegate = self
         self.collectionViewForEverything.dataSource = self
         
         self.collectionViewForEverything.register(UINib(nibName: "HomeCVCell", bundle: .main), forCellWithReuseIdentifier: "HomeCVCell")
         
-        self.setData()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -46,19 +53,19 @@ class HomeVC: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
     }
     
     func setData() {
         
-        let param = [
-            "country": "us",
-            "category": "business",
-            "apiKey": GlobalConstants.apiKey
-        ]
-        self.callTopHeadlines(params: param) { (newsList) in
+        let param = self.newsData.getRequestForNewsList(vc: self)
+        
+        self.callTopHeadlines(params: param!) { (newsList) in
+            
             self.arrNewsData.removeAll()
             self.arrNewsData = newsList
             //print(self.arrNewsData)
+            
             self.collectionViewForTopNews.reloadData()
             self.collectionViewForEverything.reloadData()
         }
@@ -101,6 +108,21 @@ class HomeVC: UIViewController {
     }
 }
 
+extension HomeVC: NewsBookmarkDelegate {
+    
+    func bookmarkBtn(_ sender: HomeCVCell) {
+        
+        //guard let tappedIndexPath = self.collectionViewForEverything.indexPath(for: sender) else { return }
+
+        //let context = DatabaseController.persistentContainer.viewContext
+        
+        //self.arrBookmarkNews.insert(self.arrNewsData[tappedIndexPath.item], at: 0)
+        //print(self.arrBookmarkNews)
+        // Save the data into CoreData...
+        //DatabaseController.saveContext()
+    }
+}
+
 extension HomeVC: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -116,18 +138,7 @@ extension HomeVC: UICollectionViewDataSource {
                 return UICollectionViewCell()
             }
             
-            bigCell.layer.cornerRadius = 5.0
-            bigCell.layer.masksToBounds = true
-            
-            bigCell.lblTitleNews.text = self.arrNewsData[indexPath.item].title
-            
-            let publishedAt = self.arrNewsData[indexPath.item].publishedAt
-            bigCell.lblTitlePublishedDate.text = self.dateFormatChange(yourdate: publishedAt, currentFormat: "yyyy-MM-dd'T'HH:mm:ssZ", requiredFormat: "dd MMM yyyy, hh:mm a")
-            
-            let imgURL = self.arrNewsData[indexPath.item].urlToImage
-            bigCell.imageNews.sd_setShowActivityIndicatorView(true)
-            bigCell.imageNews.sd_setIndicatorStyle(.gray)
-            bigCell.imageNews.sd_setImage(with: URL(string: imgURL), placeholderImage: #imageLiteral(resourceName: "placeholderImage"), options:.refreshCached)
+            bigCell.refreshData(news: self.arrNewsData[indexPath.item])
             
             return bigCell
             
@@ -138,18 +149,8 @@ extension HomeVC: UICollectionViewDataSource {
                 return UICollectionViewCell()
             }
             
-            smallCell.lblTitleNews.text = self.arrNewsData[indexPath.item].title
-            
-            let publishedAt = self.arrNewsData[indexPath.item].publishedAt
-            
-            smallCell.lblTitlePublishedDate.text = self.dateFormatChange(yourdate: publishedAt, currentFormat: "yyyy-MM-dd'T'HH:mm:ssZ", requiredFormat: "dd MMM yyyy, hh:mm a")
-            
-            let imgURL = self.arrNewsData[indexPath.item].urlToImage.trim()
-            smallCell.imageNews.sd_setShowActivityIndicatorView(true)
-            smallCell.imageNews.sd_setIndicatorStyle(.gray)
-            smallCell.imageNews.sd_setImage(with: URL(string: imgURL), placeholderImage: #imageLiteral(resourceName: "placeholderImage"), options:.refreshCached)
-            
-            smallCell.imageNews.layer.cornerRadius = 3.0
+            smallCell.refreshData(news: self.arrNewsData[indexPath.item])
+            smallCell.delegate = self
             
             return smallCell
         }
@@ -176,12 +177,12 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
         if collectionView == self.collectionViewForTopNews {
             return CGSize(width: UIScreen.main.bounds.width - 50, height: 200.0)
         } else {
-            return CGSize(width: UIScreen.main.bounds.width, height: 110.0)
+            return CGSize(width: UIScreen.main.bounds.width, height: 90.0)
         }
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-      
+        
         if collectionView == self.collectionViewForTopNews {
             return UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
         } else {
@@ -190,7 +191,7 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-       
+        
         if collectionView == self.collectionViewForTopNews {
             return 5.0
         } else {

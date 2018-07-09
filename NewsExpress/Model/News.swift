@@ -34,6 +34,16 @@ struct News {
         urlToImage = dict.toStringFrom(key: "urlToImage")
         publishedAt = dict.toStringFrom(key: "publishedAt")
     }
+    
+    func getRequestForNewsList(vc: HomeVC) -> [String: String]! {
+        
+        let dict = [
+            "country": "us",
+            "category": "business",
+            "apiKey": GlobalConstants.apiKey
+        ]
+        return dict
+    }
 }
 
 struct Source {

@@ -34,7 +34,7 @@ class AGTabBar: UITabBarController {
         
         // Create Tab two
         let stocksVC = StockVC()
-        let stocks = UITabBarItem(title: "Stocks", image: #imageLiteral(resourceName: "stock-normal"), selectedImage: #imageLiteral(resourceName: "stock-selected"))
+        let stocks = UITabBarItem(title: "Bookmark", image: #imageLiteral(resourceName: "bookmark-normal"), selectedImage: #imageLiteral(resourceName: "bookmark-selected"))
         stocksVC.tabBarItem = stocks
         
         // Create Tab three

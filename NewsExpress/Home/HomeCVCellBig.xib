@@ -33,22 +33,22 @@
                                 <rect key="frame" x="0.0" y="0.0" width="416" height="284"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lAn-SM-cBf">
-                                <rect key="frame" x="0.0" y="199" width="416" height="85"/>
+                                <rect key="frame" x="0.0" y="209" width="416" height="75"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seK-uy-EY7">
-                                        <rect key="frame" x="5" y="5" width="406" height="20.5"/>
-                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="17"/>
+                                        <rect key="frame" x="5" y="5" width="406" height="18"/>
+                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXu-0g-CFY">
-                                        <rect key="frame" x="5" y="65.5" width="28.5" height="14.5"/>
+                                        <rect key="frame" x="5" y="55.5" width="28.5" height="14.5"/>
                                         <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="12"/>
                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yae-t0-lqu">
-                                        <rect key="frame" x="380" y="55" width="31" height="30"/>
+                                        <rect key="frame" x="380" y="45" width="31" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="I45-5X-G6v"/>
@@ -56,7 +56,7 @@
                                         </constraints>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark-white" translatesAutoresizingMaskIntoConstraints="NO" id="Pme-Dg-jqh">
-                                        <rect key="frame" x="382.5" y="58" width="25" height="25"/>
+                                        <rect key="frame" x="382.5" y="48" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="gVz-JC-EXG"/>
                                             <constraint firstAttribute="width" secondItem="Pme-Dg-jqh" secondAttribute="height" multiplier="1:1" id="p7T-Bd-46k"/>
@@ -68,7 +68,7 @@
                                     <constraint firstItem="Pme-Dg-jqh" firstAttribute="centerY" secondItem="yae-t0-lqu" secondAttribute="centerY" id="2TN-gA-EUB"/>
                                     <constraint firstItem="seK-uy-EY7" firstAttribute="leading" secondItem="lAn-SM-cBf" secondAttribute="leading" constant="5" id="542-5M-A1F"/>
                                     <constraint firstItem="tXu-0g-CFY" firstAttribute="leading" secondItem="lAn-SM-cBf" secondAttribute="leading" constant="5" id="5qb-ry-UG6"/>
-                                    <constraint firstAttribute="height" constant="85" id="6gc-z8-QkT"/>
+                                    <constraint firstAttribute="height" constant="75" id="6gc-z8-QkT"/>
                                     <constraint firstAttribute="trailing" secondItem="seK-uy-EY7" secondAttribute="trailing" constant="5" id="CgM-T0-Vxm"/>
                                     <constraint firstAttribute="trailing" secondItem="yae-t0-lqu" secondAttribute="trailing" constant="5" id="Mgc-4p-bII"/>
                                     <constraint firstItem="seK-uy-EY7" firstAttribute="top" secondItem="lAn-SM-cBf" secondAttribute="top" constant="5" id="VnZ-rf-R4u"/>
@@ -91,6 +91,7 @@
                     </view>
                 </subviews>
             </view>
+            <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="jdC-To-mjF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="OzN-Lu-37x"/>
                 <constraint firstItem="jdC-To-mjF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bgR-pj-HAD"/>
@@ -110,7 +111,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="bookmark-white" width="64" height="64"/>
-        <image name="default" width="1500" height="1000"/>
+        <image name="bookmark-white" width="24" height="24"/>
+        <image name="default" width="900" height="450"/>
     </resources>
 </document>

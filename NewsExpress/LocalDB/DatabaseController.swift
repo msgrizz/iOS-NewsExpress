@@ -11,7 +11,7 @@ import CoreData
 
 class DatabaseController {
     
-    static let DBName = "NewsExpressDB"
+    static let DBName = "NewsLocalDataBase"
     
     private init() {
         

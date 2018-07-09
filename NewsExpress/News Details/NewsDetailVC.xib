@@ -99,7 +99,7 @@
                             </constraints>
                         </imageView>
                     </subviews>
-                    <color key="backgroundColor" red="0.25882352941176467" green="0.25882352941176467" blue="0.25882352941176467" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.011764705882352941" green="0.23921568627450979" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="dLX-I9-0vC" firstAttribute="centerY" secondItem="fh3-zI-l3t" secondAttribute="centerY" id="3Ny-EY-RSq"/>
                         <constraint firstAttribute="bottom" secondItem="e7l-Gc-dvR" secondAttribute="bottom" id="6CK-To-5gg"/>
@@ -123,7 +123,7 @@
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihU-gs-zm0">
                     <rect key="frame" x="0.0" y="691" width="414" height="45"/>
-                    <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.011764705882352941" green="0.23921568627450979" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="45" id="zyp-05-Zkc"/>
                     </constraints>
@@ -203,6 +203,7 @@
                             </constraints>
                         </view>
                     </subviews>
+                    <color key="backgroundColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.98039215690000003" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstItem="63u-p8-8yR" firstAttribute="top" secondItem="DdU-lb-leb" secondAttribute="top" id="FIt-kB-Wpt"/>
                         <constraint firstAttribute="trailing" secondItem="63u-p8-8yR" secondAttribute="trailing" id="M54-pz-ICX"/>
@@ -211,7 +212,7 @@
                     </constraints>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ffR-8J-lWm" secondAttribute="trailing" id="2Rg-0f-gdu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ihU-gs-zm0" secondAttribute="trailing" id="6nw-aU-ENW"/>
@@ -232,7 +233,7 @@
         <image name="audio-white-on" width="100" height="100"/>
         <image name="back-white" width="96" height="96"/>
         <image name="clock-gray" width="96" height="96"/>
-        <image name="default" width="1500" height="1000"/>
+        <image name="default" width="900" height="450"/>
         <image name="share-white" width="96" height="96"/>
     </resources>
 </document>

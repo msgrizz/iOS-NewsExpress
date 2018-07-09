@@ -29,6 +29,7 @@
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Ex. bitcoin" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7gv-G5-Uyu">
                             <rect key="frame" x="60" y="10" width="294" height="40"/>
+                            <color key="backgroundColor" red="0.99607843139999996" green="0.99607843139999996" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="9e3-Ua-8Ec"/>
                             </constraints>
@@ -66,7 +67,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.011764705882352941" green="0.23921568627450979" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="7gv-G5-Uyu" firstAttribute="centerX" secondItem="Ks4-GO-Sg8" secondAttribute="centerX" id="2ag-jb-HZo"/>
                         <constraint firstItem="YAt-gJ-Pxk" firstAttribute="centerX" secondItem="4fw-Dx-EAx" secondAttribute="centerX" id="4Ky-eK-taY"/>
@@ -84,7 +85,7 @@
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="BUK-tZ-m5q">
                     <rect key="frame" x="0.0" y="80" width="414" height="656"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tmG-QI-tMj">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -93,7 +94,7 @@
                     </collectionViewFlowLayout>
                 </collectionView>
             </subviews>
-            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="BUK-tZ-m5q" secondAttribute="bottom" id="NPP-Lu-hEv"/>
                 <constraint firstItem="Ks4-GO-Sg8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NTG-jA-TCr"/>
