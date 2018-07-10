@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "icons8-more-24-2.png",
+      "filename" : "icons8-home-page-24.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icons8-more-48-2.png",
+      "filename" : "icons8-home-page-48.png",
       "scale" : "2x"
     },
     {
@@ -18,8 +18,5 @@
   "info" : {
     "version" : 1,
     "author" : "xcode"
-  },
-  "properties" : {
-    "template-rendering-intent" : "original"
   }
 }

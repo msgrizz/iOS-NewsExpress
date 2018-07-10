@@ -41,8 +41,8 @@ class HomeCVCellBig: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        self.layer.cornerRadius = 5.0
-        self.layer.masksToBounds = true
+        self.mainView.layer.cornerRadius = 3.0
+        self.mainView.layer.masksToBounds = true
     }
     
 }

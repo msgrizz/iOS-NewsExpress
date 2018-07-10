@@ -19,47 +19,27 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CategoriesCVCell" customModule="NewsExpress" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+            <rect key="frame" x="0.0" y="0.0" width="426" height="40"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                <rect key="frame" x="0.0" y="0.0" width="426" height="40"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cqA-Wu-0yt">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+                        <rect key="frame" x="0.0" y="0.0" width="426" height="40"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="Z7O-Ow-mUA">
-                                <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
-                            </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6VN-1N-6Qk">
-                                <rect key="frame" x="0.0" y="285" width="400" height="115"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFQ-KL-TOP">
-                                        <rect key="frame" x="5" y="0.0" width="395" height="115"/>
-                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="12"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="10" y="7.6666666666666679" width="25" height="25.000000000000004"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="6VN-1N-6Qk" secondAttribute="height" multiplier="80:23" id="4dn-X5-7mH"/>
-                                    <constraint firstItem="wFQ-KL-TOP" firstAttribute="leading" secondItem="6VN-1N-6Qk" secondAttribute="leading" constant="5" id="Ij5-g9-Fmm"/>
-                                    <constraint firstItem="wFQ-KL-TOP" firstAttribute="top" secondItem="6VN-1N-6Qk" secondAttribute="top" id="ZaX-io-o9s"/>
-                                    <constraint firstAttribute="trailing" secondItem="wFQ-KL-TOP" secondAttribute="trailing" id="acS-OJ-U8X"/>
-                                    <constraint firstAttribute="bottom" secondItem="wFQ-KL-TOP" secondAttribute="bottom" id="nT0-OA-acH"/>
+                                    <constraint firstAttribute="width" secondItem="Z7O-Ow-mUA" secondAttribute="height" multiplier="1:1" id="HEo-sZ-qTC"/>
+                                    <constraint firstAttribute="height" constant="25" id="f4d-0P-W1c"/>
                                 </constraints>
-                            </view>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Z7O-Ow-mUA" secondAttribute="bottom" id="2EA-Bi-fne"/>
-                            <constraint firstItem="6VN-1N-6Qk" firstAttribute="leading" secondItem="cqA-Wu-0yt" secondAttribute="leading" id="4gd-2S-uI6"/>
-                            <constraint firstAttribute="bottom" secondItem="6VN-1N-6Qk" secondAttribute="bottom" id="7hk-PA-nTD"/>
-                            <constraint firstAttribute="trailing" secondItem="Z7O-Ow-mUA" secondAttribute="trailing" id="Srd-HI-ucI"/>
-                            <constraint firstItem="Z7O-Ow-mUA" firstAttribute="leading" secondItem="cqA-Wu-0yt" secondAttribute="leading" id="gvT-oR-79Q"/>
-                            <constraint firstAttribute="trailing" secondItem="6VN-1N-6Qk" secondAttribute="trailing" id="mQB-Hj-yLi"/>
-                            <constraint firstItem="Z7O-Ow-mUA" firstAttribute="top" secondItem="cqA-Wu-0yt" secondAttribute="top" id="nk9-Ug-E8P"/>
+                            <constraint firstItem="Z7O-Ow-mUA" firstAttribute="centerY" secondItem="cqA-Wu-0yt" secondAttribute="centerY" id="0JN-AQ-OOW"/>
+                            <constraint firstItem="Z7O-Ow-mUA" firstAttribute="leading" secondItem="cqA-Wu-0yt" secondAttribute="leading" constant="10" id="QvI-XV-8xc"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -67,24 +47,33 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goR-Fj-k5f">
+                        <rect key="frame" x="45" y="0.0" width="381" height="40"/>
+                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
+                        <color key="textColor" red="0.36862745098039218" green="0.36862745098039218" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <constraints>
+                <constraint firstItem="goR-Fj-k5f" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="0uH-6K-78U"/>
                 <constraint firstAttribute="trailing" secondItem="cqA-Wu-0yt" secondAttribute="trailing" id="68W-wM-pAB"/>
+                <constraint firstAttribute="trailing" secondItem="goR-Fj-k5f" secondAttribute="trailing" id="9EE-X7-vKw"/>
                 <constraint firstItem="cqA-Wu-0yt" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="QXg-bP-tJY"/>
                 <constraint firstItem="cqA-Wu-0yt" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="XZ0-n9-5D2"/>
+                <constraint firstAttribute="bottom" secondItem="goR-Fj-k5f" secondAttribute="bottom" id="bP0-jh-lfj"/>
                 <constraint firstAttribute="bottom" secondItem="cqA-Wu-0yt" secondAttribute="bottom" id="dIa-3E-YhF"/>
+                <constraint firstItem="goR-Fj-k5f" firstAttribute="leading" secondItem="Z7O-Ow-mUA" secondAttribute="trailing" constant="10" id="rPh-F7-yD9"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <size key="customSize" width="301" height="295"/>
+            <size key="customSize" width="327" height="-63"/>
             <connections>
                 <outlet property="cardView" destination="cqA-Wu-0yt" id="VJL-WC-SXN"/>
                 <outlet property="imgCategories" destination="Z7O-Ow-mUA" id="78s-cQ-5jK"/>
-                <outlet property="lblCategoriesName" destination="wFQ-KL-TOP" id="x8c-Id-6gV"/>
-                <outlet property="viewLblBack" destination="6VN-1N-6Qk" id="0mi-IU-w5L"/>
+                <outlet property="lblCategoriesName" destination="goR-Fj-k5f" id="FLq-ls-XMG"/>
             </connections>
-            <point key="canvasLocation" x="-126" y="-8"/>
+            <point key="canvasLocation" x="289" y="-187"/>
         </collectionViewCell>
     </objects>
     <resources>

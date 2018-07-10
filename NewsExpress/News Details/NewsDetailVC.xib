@@ -142,25 +142,25 @@
                             <rect key="frame" x="0.0" y="0.0" width="414" height="626"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPL-Lp-JAO">
-                                    <rect key="frame" x="10" y="14.999999999999998" width="394" height="26.333333333333329"/>
-                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="22"/>
+                                    <rect key="frame" x="10" y="15" width="394" height="24"/>
+                                    <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="20"/>
                                     <color key="textColor" red="0.36862745099999999" green="0.36862745099999999" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="p8l-SH-BgU">
-                                    <rect key="frame" x="10" y="80.333333333333343" width="394" height="222.00000000000003"/>
+                                    <rect key="frame" x="10" y="78" width="394" height="222"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="p8l-SH-BgU" secondAttribute="height" multiplier="197:111" id="YH0-gb-vk3"/>
                                     </constraints>
                                 </imageView>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="12" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGG-3B-dFp">
-                                    <rect key="frame" x="10" y="317.33333333333331" width="394" height="20.333333333333314"/>
+                                    <rect key="frame" x="10" y="315" width="394" height="20.333333333333314"/>
                                     <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="17"/>
                                     <color key="textColor" red="0.36862745099999999" green="0.36862745099999999" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="sJE-bt-Lc9">
-                                    <rect key="frame" x="10" y="56.333333333333329" width="98" height="14"/>
+                                    <rect key="frame" x="10" y="54" width="98" height="14"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock-gray" translatesAutoresizingMaskIntoConstraints="NO" id="BpV-f5-WH8">
                                             <rect key="frame" x="0.0" y="0.0" width="14" height="14"/>

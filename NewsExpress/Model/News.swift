@@ -37,12 +37,20 @@ struct News {
     
     func getRequestForNewsList(vc: HomeVC) -> [String: String]! {
         
-        let dict = [
-            "country": "us",
-            "category": "business",
-            "apiKey": GlobalConstants.apiKey
-        ]
-        return dict
+        if vc.source == "" {
+            let dict = [
+                "country": "us",
+                "category": "business",
+                "apiKey": GlobalConstants.apiKey
+            ]
+            return dict
+        } else {
+            let dict = [
+                "sources": vc.source,
+                "apiKey": GlobalConstants.apiKey
+            ]
+            return dict
+        }
     }
 }
 

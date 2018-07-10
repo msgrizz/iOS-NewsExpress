@@ -112,14 +112,73 @@ extension CategoriesVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLa
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
+        let vc = HomeVC(nibName: "HomeVC", bundle: nil)
+        
+        if indexPath.section == 0 {
+            if indexPath.item == 0 {
+                vc.source = "google-news-in"
+            } else if indexPath.item == 1 {
+                vc.source = "bbc-news"
+            } else if indexPath.item == 2 {
+                vc.source = "the-hindu"
+            } else if indexPath.item == 3 {
+                vc.source = "google-news"
+            } else if indexPath.item == 4 {
+                vc.source = "google-news"
+            }
+        } else if indexPath.section == 1 {
+            if indexPath.item == 0 {
+                vc.source = "google-news"
+            } else if indexPath.item == 1 {
+                vc.source = "google-news"
+            } else if indexPath.item == 2 {
+                vc.source = "google-news"
+            }
+        } else if indexPath.section == 2 {
+            if indexPath.item == 0 {
+                vc.source = "google-news"
+            } else if indexPath.item == 1 {
+                vc.source = "google-news"
+            } else if indexPath.item == 2 {
+                vc.source = "google-news"
+            }
+        } else if indexPath.section == 3 {
+            if indexPath.item == 0 {
+                vc.source = "google-news"
+            } else if indexPath.item == 1 {
+                vc.source = "google-news"
+            }
+        } else if indexPath.section == 4 {
+            if indexPath.item == 0 {
+                vc.source = "google-news"
+            } else if indexPath.item == 1 {
+                vc.source = "google-news"
+            } else if indexPath.item == 2 {
+                vc.source = "google-news"
+            } else if indexPath.item == 3 {
+                vc.source = "google-news"
+            } else if indexPath.item == 4 {
+                vc.source = "google-news"
+            } else if indexPath.item == 5 {
+                vc.source = "google-news"
+            }
+        } else if indexPath.section == 5 {
+            if indexPath.item == 0 {
+                vc.source = "google-news"
+            } else if indexPath.item == 1 {
+                vc.source = "google-news"
+            }
+        }
+        self.present(vc, animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: (UIScreen.main.bounds.width/3) - 2, height: UIScreen.main.bounds.width/3)
+        //return CGSize(width: (UIScreen.main.bounds.width/3) - 2, height: UIScreen.main.bounds.width/3)
+        return CGSize(width: UIScreen.main.bounds.width, height: 40.0)
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 0)
+        return UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

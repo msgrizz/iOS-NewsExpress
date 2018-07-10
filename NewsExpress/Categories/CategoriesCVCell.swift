@@ -14,7 +14,7 @@ class CategoriesCVCell: UICollectionViewCell {
     
     @IBOutlet weak var imgCategories: UIImageView!
     
-    @IBOutlet weak var viewLblBack: UIView!
+//    @IBOutlet weak var viewLblBack: UIView!
     
     @IBOutlet weak var lblCategoriesName: UILabel!
     

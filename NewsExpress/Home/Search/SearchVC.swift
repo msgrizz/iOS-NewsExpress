@@ -17,7 +17,7 @@ class SearchVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var collectionViewSearch: UICollectionView!
     
     var arrNewsData = [News]()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -133,7 +133,7 @@ extension SearchVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: UIScreen.main.bounds.width, height: 110.0)
+        return CGSize(width: UIScreen.main.bounds.width, height: 90.0)
     }
     
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
