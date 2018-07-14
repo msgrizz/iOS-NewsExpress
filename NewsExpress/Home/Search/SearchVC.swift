@@ -17,7 +17,7 @@ class SearchVC: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var collectionViewSearch: UICollectionView!
     
     var arrNewsData = [News]()
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -53,7 +53,10 @@ class SearchVC: UIViewController, UITextFieldDelegate {
     
     @objc func doneButtonAction() {
         self.txtFieldSearch.resignFirstResponder()
-        self.setData(query: (self.txtFieldSearch.text?.trim())!)
+        
+        if self.txtFieldSearch.text?.count != 0 {
+            self.setData(query: (self.txtFieldSearch.text?.trim())!)
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -85,7 +88,9 @@ class SearchVC: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func tapDoneBtn(_ sender: UIButton) {
-        self.setData(query: (self.txtFieldSearch.text?.trim())!)
+        if self.txtFieldSearch.text?.count != 0 {
+            self.setData(query: (self.txtFieldSearch.text?.trim())!)
+        }
     }
 }
 

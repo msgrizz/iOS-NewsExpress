@@ -122,7 +122,7 @@ extension CategoriesVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLa
             } else if indexPath.item == 2 {
                 vc.source = "the-hindu"
             } else if indexPath.item == 3 {
-                vc.source = "google-news"
+                vc.source = "the-times-of-india"
             } else if indexPath.item == 4 {
                 vc.source = "google-news"
             }
