@@ -10,6 +10,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="VerdanaBold.ttf">
+            <string>Verdana-Bold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchVC" customModule="NewsExpress" customModuleProvider="target">
             <connections>
@@ -54,11 +59,11 @@
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m09-tw-XgY">
-                            <rect key="frame" x="367" y="10" width="38" height="40"/>
+                            <rect key="frame" x="361" y="10" width="44" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="XqW-9y-2Fj"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <fontDescription key="fontDescription" name="Verdana-Bold" family="Verdana" pointSize="15"/>
                             <state key="normal" title="Done">
                                 <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
@@ -67,7 +72,7 @@
                             </connections>
                         </button>
                     </subviews>
-                    <color key="backgroundColor" red="0.011764705882352941" green="0.23921568627450979" blue="0.41960784313725491" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.25882352939999997" green="0.25882352939999997" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="7gv-G5-Uyu" firstAttribute="centerX" secondItem="Ks4-GO-Sg8" secondAttribute="centerX" id="2ag-jb-HZo"/>
                         <constraint firstItem="YAt-gJ-Pxk" firstAttribute="centerX" secondItem="4fw-Dx-EAx" secondAttribute="centerX" id="4Ky-eK-taY"/>

@@ -11,9 +11,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Optima.ttc">
-            <string>Optima-Bold</string>
-            <string>Optima-Regular</string>
+        <array key="Verdana.ttf">
+            <string>Verdana</string>
         </array>
     </customFonts>
     <objects>
@@ -36,16 +35,16 @@
                                     <constraint firstAttribute="width" constant="80" id="gFg-6P-FNW"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzI-45-eB9">
-                                <rect key="frame" x="95" y="5" width="371" height="16.666666666666668"/>
-                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="14"/>
-                                <color key="textColor" red="0.36862745098039218" green="0.36862745098039218" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rzI-45-eB9">
+                                <rect key="frame" x="95" y="5" width="371" height="16"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="13"/>
+                                <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HcJ-Zt-a9Z">
-                                <rect key="frame" x="95" y="70.666666666666671" width="26" height="14.333333333333329"/>
-                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="11"/>
-                                <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="95" y="72.666666666666671" width="26.666666666666671" height="12.333333333333329"/>
+                                <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="10"/>
+                                <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7W-88-1k2">
@@ -59,7 +58,7 @@
                                     <action selector="tapBookmarkBtn:" destination="gTV-IL-0wX" eventType="touchUpInside" id="7rx-vs-eA6"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark-selected" translatesAutoresizingMaskIntoConstraints="NO" id="VX2-bh-d8t">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark-normal" translatesAutoresizingMaskIntoConstraints="NO" id="VX2-bh-d8t">
                                 <rect key="frame" x="444.66666666666669" y="63.333333333333343" width="24" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="24" id="bU5-nS-LdX"/>
@@ -67,7 +66,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="VX2-bh-d8t" firstAttribute="centerY" secondItem="Y7W-88-1k2" secondAttribute="centerY" id="Jao-8W-aL3"/>
                             <constraint firstItem="rzI-45-eB9" firstAttribute="leading" secondItem="f1j-CC-4C7" secondAttribute="trailing" constant="10" id="LRR-Bn-vBZ"/>
@@ -84,7 +83,7 @@
                     </view>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="AZ2-t9-6s7" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="BWE-OL-RrV"/>
                 <constraint firstAttribute="trailing" secondItem="AZ2-t9-6s7" secondAttribute="trailing" id="dJv-h1-USN"/>
@@ -104,7 +103,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="bookmark-selected" width="24" height="24"/>
+        <image name="bookmark-normal" width="24" height="24"/>
         <image name="default" width="900" height="450"/>
     </resources>
 </document>

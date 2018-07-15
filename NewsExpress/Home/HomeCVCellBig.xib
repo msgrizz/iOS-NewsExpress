@@ -11,9 +11,8 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Optima.ttc">
-            <string>Optima-Bold</string>
-            <string>Optima-Regular</string>
+        <array key="Verdana.ttf">
+            <string>Verdana</string>
         </array>
     </customFonts>
     <objects>
@@ -30,21 +29,24 @@
                         <rect key="frame" x="5" y="5" width="406" height="274"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default" translatesAutoresizingMaskIntoConstraints="NO" id="7qj-Re-7E6">
-                                <rect key="frame" x="0.0" y="0.0" width="406" height="274"/>
+                                <rect key="frame" x="0.0" y="0.0" width="406" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="bLi-wA-Gyg"/>
+                                </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lAn-SM-cBf">
                                 <rect key="frame" x="0.0" y="199" width="406" height="75"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seK-uy-EY7">
-                                        <rect key="frame" x="5" y="5" width="396" height="18"/>
-                                        <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="15"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="5" y="5" width="396" height="18.5"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="15"/>
+                                        <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXu-0g-CFY">
-                                        <rect key="frame" x="5" y="55.5" width="28.5" height="14.5"/>
-                                        <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="12"/>
-                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <rect key="frame" x="5" y="57.5" width="27" height="12.5"/>
+                                        <fontDescription key="fontDescription" name="Verdana" family="Verdana" pointSize="10"/>
+                                        <color key="textColor" red="0.4756349325" green="0.47564673419999998" blue="0.47564041610000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yae-t0-lqu">
@@ -55,7 +57,7 @@
                                             <constraint firstAttribute="width" secondItem="yae-t0-lqu" secondAttribute="height" multiplier="1:1" constant="1" id="qrC-EH-2PX"/>
                                         </constraints>
                                     </button>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark-white" translatesAutoresizingMaskIntoConstraints="NO" id="Pme-Dg-jqh">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark-normal" translatesAutoresizingMaskIntoConstraints="NO" id="Pme-Dg-jqh">
                                         <rect key="frame" x="372.5" y="48" width="25" height="25"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="gVz-JC-EXG"/>
@@ -63,7 +65,7 @@
                                         </constraints>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="Pme-Dg-jqh" firstAttribute="centerY" secondItem="yae-t0-lqu" secondAttribute="centerY" id="2TN-gA-EUB"/>
                                     <constraint firstItem="seK-uy-EY7" firstAttribute="leading" secondItem="lAn-SM-cBf" secondAttribute="leading" constant="5" id="542-5M-A1F"/>
@@ -85,13 +87,12 @@
                             <constraint firstItem="7qj-Re-7E6" firstAttribute="leading" secondItem="jdC-To-mjF" secondAttribute="leading" id="Fog-eI-TMe"/>
                             <constraint firstItem="lAn-SM-cBf" firstAttribute="leading" secondItem="jdC-To-mjF" secondAttribute="leading" id="cu0-yJ-VSK"/>
                             <constraint firstAttribute="bottom" secondItem="lAn-SM-cBf" secondAttribute="bottom" id="foh-Jd-55k"/>
-                            <constraint firstAttribute="bottom" secondItem="7qj-Re-7E6" secondAttribute="bottom" id="hoT-eI-pOv"/>
                             <constraint firstAttribute="trailing" secondItem="7qj-Re-7E6" secondAttribute="trailing" id="qAr-VH-aYY"/>
                         </constraints>
                     </view>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.99607843137254903" green="0.99607843137254903" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="jdC-To-mjF" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="OzN-Lu-37x"/>
                 <constraint firstItem="jdC-To-mjF" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="bgR-pj-HAD"/>
@@ -111,7 +112,7 @@
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="bookmark-white" width="24" height="24"/>
+        <image name="bookmark-normal" width="24" height="24"/>
         <image name="default" width="900" height="450"/>
     </resources>
 </document>

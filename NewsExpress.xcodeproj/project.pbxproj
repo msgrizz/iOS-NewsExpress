@@ -25,6 +25,8 @@
 		FA47CAD620D576E9002723D3 /* ParallaxEffect+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA47CAD520D576E9002723D3 /* ParallaxEffect+Extension.swift */; };
 		FA95714820CB0F3B00EA7B7E /* NewsDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA95714620CB0F3B00EA7B7E /* NewsDetailVC.swift */; };
 		FA95714920CB0F3B00EA7B7E /* NewsDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA95714720CB0F3B00EA7B7E /* NewsDetailVC.xib */; };
+		FAA0A91A20FBC07C005D6445 /* AboutTheAppVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA0A91820FBC07C005D6445 /* AboutTheAppVC.swift */; };
+		FAA0A91B20FBC07C005D6445 /* AboutTheAppVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA0A91920FBC07C005D6445 /* AboutTheAppVC.xib */; };
 		FAA1B1A820CDA1F500144474 /* CategoriesSectionCRV.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA1B1A620CDA1F500144474 /* CategoriesSectionCRV.swift */; };
 		FAA1B1A920CDA1F500144474 /* CategoriesSectionCRV.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAA1B1A720CDA1F500144474 /* CategoriesSectionCRV.xib */; };
 		FAA2697220DE3B8A00B5DFE3 /* DatabaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAA2697120DE3B8A00B5DFE3 /* DatabaseController.swift */; };
@@ -37,6 +39,8 @@
 		FAD0778620E13B4700F8C6FE /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD0778420E13B4700F8C6FE /* SearchVC.swift */; };
 		FAD0778720E13B4700F8C6FE /* SearchVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD0778520E13B4700F8C6FE /* SearchVC.xib */; };
 		FAD0778920E13F9B00F8C6FE /* SearchVC+API.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD0778820E13F9B00F8C6FE /* SearchVC+API.swift */; };
+		FAD9642220FB50610044ED32 /* QuoteCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD9642020FB50610044ED32 /* QuoteCVCell.swift */; };
+		FAD9642320FB50610044ED32 /* QuoteCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD9642120FB50610044ED32 /* QuoteCVCell.xib */; };
 		FAE4AAD520CBC4F100E06B2A /* CellAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4AAD420CBC4F100E06B2A /* CellAnimator.swift */; };
 		FAE4AAD720CBC85C00E06B2A /* ImageViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4AAD620CBC85C00E06B2A /* ImageViewShadow.swift */; };
 		FAE4AAD920CBD15E00E06B2A /* TextToSpeechConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE4AAD820CBD15E00E06B2A /* TextToSpeechConverter.swift */; };
@@ -149,6 +153,8 @@
 		FA47CAD520D576E9002723D3 /* ParallaxEffect+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ParallaxEffect+Extension.swift"; sourceTree = "<group>"; };
 		FA95714620CB0F3B00EA7B7E /* NewsDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsDetailVC.swift; sourceTree = "<group>"; };
 		FA95714720CB0F3B00EA7B7E /* NewsDetailVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsDetailVC.xib; sourceTree = "<group>"; };
+		FAA0A91820FBC07C005D6445 /* AboutTheAppVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutTheAppVC.swift; sourceTree = "<group>"; };
+		FAA0A91920FBC07C005D6445 /* AboutTheAppVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutTheAppVC.xib; sourceTree = "<group>"; };
 		FAA1B1A620CDA1F500144474 /* CategoriesSectionCRV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesSectionCRV.swift; sourceTree = "<group>"; };
 		FAA1B1A720CDA1F500144474 /* CategoriesSectionCRV.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesSectionCRV.xib; sourceTree = "<group>"; };
 		FAA2697120DE3B8A00B5DFE3 /* DatabaseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseController.swift; sourceTree = "<group>"; };
@@ -161,6 +167,8 @@
 		FAD0778420E13B4700F8C6FE /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
 		FAD0778520E13B4700F8C6FE /* SearchVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchVC.xib; sourceTree = "<group>"; };
 		FAD0778820E13F9B00F8C6FE /* SearchVC+API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SearchVC+API.swift"; sourceTree = "<group>"; };
+		FAD9642020FB50610044ED32 /* QuoteCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuoteCVCell.swift; sourceTree = "<group>"; };
+		FAD9642120FB50610044ED32 /* QuoteCVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuoteCVCell.xib; sourceTree = "<group>"; };
 		FAE4AAD420CBC4F100E06B2A /* CellAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellAnimator.swift; sourceTree = "<group>"; };
 		FAE4AAD620CBC85C00E06B2A /* ImageViewShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewShadow.swift; sourceTree = "<group>"; };
 		FAE4AAD820CBD15E00E06B2A /* TextToSpeechConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeechConverter.swift; sourceTree = "<group>"; };
@@ -290,6 +298,8 @@
 			children = (
 				FA0A176E20CD22B60057EB73 /* MoreVC.swift */,
 				FA0A176F20CD22B60057EB73 /* MoreVC.xib */,
+				FAA0A91820FBC07C005D6445 /* AboutTheAppVC.swift */,
+				FAA0A91920FBC07C005D6445 /* AboutTheAppVC.xib */,
 			);
 			path = More;
 			sourceTree = "<group>";
@@ -319,6 +329,8 @@
 			children = (
 				FA45B1DF20CD45E300D222B8 /* QuoteVC.swift */,
 				FA45B1E020CD45E300D222B8 /* QuoteVC.xib */,
+				FAD9642020FB50610044ED32 /* QuoteCVCell.swift */,
+				FAD9642120FB50610044ED32 /* QuoteCVCell.xib */,
 			);
 			path = Quotes;
 			sourceTree = "<group>";
@@ -733,12 +745,14 @@
 				FAFD928720C45F6C00787CE1 /* WelcomeScreenVC.xib in Resources */,
 				FAF07B9C20C8677F00D080A1 /* HomeCVCell.xib in Resources */,
 				FAFD91EE20C4446000787CE1 /* LaunchScreen.storyboard in Resources */,
+				FAA0A91B20FBC07C005D6445 /* AboutTheAppVC.xib in Resources */,
 				FAFD91EB20C4446000787CE1 /* Assets.xcassets in Resources */,
 				FAA1B1A920CDA1F500144474 /* CategoriesSectionCRV.xib in Resources */,
 				FAFD929020C4739900787CE1 /* WelcomeScreenSecondVC.xib in Resources */,
 				FA95714920CB0F3B00EA7B7E /* NewsDetailVC.xib in Resources */,
 				FAA7111F20F40025006F611D /* BookmarkVC.xib in Resources */,
 				FAD0778720E13B4700F8C6FE /* SearchVC.xib in Resources */,
+				FAD9642320FB50610044ED32 /* QuoteCVCell.xib in Resources */,
 				FA45B1E220CD45E300D222B8 /* QuoteVC.xib in Resources */,
 				FA45B1EF20CD555200D222B8 /* CategoriesCVCell.xib in Resources */,
 				FA0A177120CD22B60057EB73 /* MoreVC.xib in Resources */,
@@ -871,6 +885,7 @@
 				FAA7111420F3F17E006F611D /* PersistentApiData.swift in Sources */,
 				FAFD927120C44A4C00787CE1 /* Transition.swift in Sources */,
 				FAFD924720C447A000787CE1 /* NewsExpressSharedInstance.swift in Sources */,
+				FAA0A91A20FBC07C005D6445 /* AboutTheAppVC.swift in Sources */,
 				FA95714820CB0F3B00EA7B7E /* NewsDetailVC.swift in Sources */,
 				FAFD921C20C445EE00787CE1 /* SHReachabilityManager.swift in Sources */,
 				FAF07B9720C8533100D080A1 /* HomeVC+API.swift in Sources */,
@@ -911,6 +926,7 @@
 				FAF07B9B20C8677F00D080A1 /* HomeCVCell.swift in Sources */,
 				FA45B1EA20CD54F700D222B8 /* CategoriesVC.swift in Sources */,
 				FAFD926C20C44A4C00787CE1 /* ValidationViewController.swift in Sources */,
+				FAD9642220FB50610044ED32 /* QuoteCVCell.swift in Sources */,
 				FAFD923B20C446D100787CE1 /* UIDevice+Utility.swift in Sources */,
 				FA45B1EE20CD555200D222B8 /* CategoriesCVCell.swift in Sources */,
 				FAFD923620C446D100787CE1 /* UIView+AnimateUp.swift in Sources */,
@@ -1087,7 +1103,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2865CN59U7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NewsExpress/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ayushmaan.NewsExpress;
@@ -1106,7 +1122,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2865CN59U7;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = NewsExpress/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ayushmaan.NewsExpress;

@@ -10,6 +10,8 @@ import UIKit
 
 class AGTabBar: UITabBarController {
     
+    var source = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,16 +26,17 @@ class AGTabBar: UITabBarController {
     
     func setupTabBar() {
         
-        UITabBar.appearance().tintColor = UIColor(hex: "033d6b")
+        UITabBar.appearance().tintColor = UIColor(hex: "424242")
         
         // Create Tab one
         let homeVC = HomeVC()
         let home = UITabBarItem(title: "Home", image: #imageLiteral(resourceName: "home-normal"), selectedImage: #imageLiteral(resourceName: "home-selected-blue"))
         homeVC.tabBarItem = home
+        homeVC.source = self.source
         
         // Create Tab two
         let bookmarkVC = BookmarkVC()
-        let bookmark = UITabBarItem(title: "Bookmark", image: #imageLiteral(resourceName: "bookmark-normal"), selectedImage: #imageLiteral(resourceName: "bookmark-selected-blue"))
+        let bookmark = UITabBarItem(title: "Bookmark", image: #imageLiteral(resourceName: "bookmark-normal"), selectedImage: #imageLiteral(resourceName: "bookmark-selected"))
         bookmarkVC.tabBarItem = bookmark
         
         // Create Tab three
@@ -55,7 +58,7 @@ class AGTabBar: UITabBarController {
         }
         
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor(hex: "9e9e9e")], for: .normal)
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor(hex: "033d6b")], for: .selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor(hex: "424242")], for: .selected)
     }
 }
 

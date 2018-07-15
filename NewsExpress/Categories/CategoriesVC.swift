@@ -18,23 +18,23 @@ class CategoriesVC: UIViewController {
     
     let arrSection = ["GENERAL", "ENTERTAINMENT", "SPORTS", "SCIENCE", "TECHNOLOGY", "GAMING"]
     
-    let arrGeneralTitle = ["Google News", "BBC", "The Hindu", "TOI", "The Hindu"]
-    let arrGeneralImage = [#imageLiteral(resourceName: "google-news"), #imageLiteral(resourceName: "bbc-news"), #imageLiteral(resourceName: "theHindu-news"), #imageLiteral(resourceName: "toi-news"), #imageLiteral(resourceName: "theHindu-news")]
+    let arrGeneralTitle = ["Google News", "BBC", "The Hindu", "TOI"]
+    let arrGeneralImage = [#imageLiteral(resourceName: "googlenews"), #imageLiteral(resourceName: "bbc-news"), #imageLiteral(resourceName: "theHindu-news"), #imageLiteral(resourceName: "toi-news")]
     
     let arrEntertainmentTitle = ["Buzzfeed", "Mashable", "MTV News"]
-    let arrEntertainmentImage = [#imageLiteral(resourceName: "google-news"), #imageLiteral(resourceName: "bbc-news"), #imageLiteral(resourceName: "theHindu-news")]
+    let arrEntertainmentImage = [#imageLiteral(resourceName: "buzzfeed"), #imageLiteral(resourceName: "mashable"), #imageLiteral(resourceName: "mtvnews")]
     
     let arrSportsTitle = ["BBC Sports", "ESPN Cric Info", "TalkSports"]
-    let arrSportsImage = [#imageLiteral(resourceName: "google-news"), #imageLiteral(resourceName: "bbc-news"), #imageLiteral(resourceName: "theHindu-news")]
+    let arrSportsImage = [#imageLiteral(resourceName: "bbcsports"), #imageLiteral(resourceName: "espncricinfo"), #imageLiteral(resourceName: "talksports")]
     
     let arrScienceTitle = ["Medical News Today", "National Geographic"]
-    let arrScienceImage = [#imageLiteral(resourceName: "google-news"), #imageLiteral(resourceName: "bbc-news")]
+    let arrScienceImage = [#imageLiteral(resourceName: "medicalnewstoday"), #imageLiteral(resourceName: "nationalgeografic")]
     
     let arrTechnologyTitle = ["Crypto Coins News", "Engadget", "The Next Web", "The Verge", "TechCrunch", "TechReader"]
-    let arrTechnologyImage = [#imageLiteral(resourceName: "google-news"), #imageLiteral(resourceName: "bbc-news"), #imageLiteral(resourceName: "theHindu-news"), #imageLiteral(resourceName: "toi-news"), #imageLiteral(resourceName: "theHindu-news"), #imageLiteral(resourceName: "google-news")]
+    let arrTechnologyImage = [#imageLiteral(resourceName: "cryptocoinnews"), #imageLiteral(resourceName: "engadget"), #imageLiteral(resourceName: "thenextweb"), #imageLiteral(resourceName: "theverge"), #imageLiteral(resourceName: "techcrunch")]
     
     let arrGamingTitle = ["IGN", "Polygon"]
-    let arrGamingImage = [#imageLiteral(resourceName: "google-news"), #imageLiteral(resourceName: "bbc-news")]
+    let arrGamingImage = [#imageLiteral(resourceName: "ign"), #imageLiteral(resourceName: "polygon")]
     
     var arrCombined: NSMutableArray! = nil
     
@@ -112,7 +112,7 @@ extension CategoriesVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLa
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let vc = HomeVC(nibName: "HomeVC", bundle: nil)
+        let vc = AGTabBar()
         
         if indexPath.section == 0 {
             if indexPath.item == 0 {
@@ -123,50 +123,48 @@ extension CategoriesVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLa
                 vc.source = "the-hindu"
             } else if indexPath.item == 3 {
                 vc.source = "the-times-of-india"
-            } else if indexPath.item == 4 {
-                vc.source = "google-news"
             }
         } else if indexPath.section == 1 {
             if indexPath.item == 0 {
-                vc.source = "google-news"
+                vc.source = "buzzfeed"
             } else if indexPath.item == 1 {
-                vc.source = "google-news"
+                vc.source = "mashable"
             } else if indexPath.item == 2 {
-                vc.source = "google-news"
+                vc.source = "mtv-news"
             }
         } else if indexPath.section == 2 {
             if indexPath.item == 0 {
-                vc.source = "google-news"
+                vc.source = "bbc-sport"
             } else if indexPath.item == 1 {
-                vc.source = "google-news"
+                vc.source = "espn-cric-info"
             } else if indexPath.item == 2 {
-                vc.source = "google-news"
+                vc.source = "talksport"
             }
         } else if indexPath.section == 3 {
             if indexPath.item == 0 {
-                vc.source = "google-news"
+                vc.source = "medical-news-today"
             } else if indexPath.item == 1 {
-                vc.source = "google-news"
+                vc.source = "national-geographic"
             }
         } else if indexPath.section == 4 {
             if indexPath.item == 0 {
-                vc.source = "google-news"
+                vc.source = "crypto-coins-news"
             } else if indexPath.item == 1 {
-                vc.source = "google-news"
+                vc.source = "engadget"
             } else if indexPath.item == 2 {
-                vc.source = "google-news"
+                vc.source = "the-next-web"
             } else if indexPath.item == 3 {
-                vc.source = "google-news"
+                vc.source = "the-verge"
             } else if indexPath.item == 4 {
-                vc.source = "google-news"
+                vc.source = "techcrunch"
             } else if indexPath.item == 5 {
-                vc.source = "google-news"
+                vc.source = "techradar"
             }
         } else if indexPath.section == 5 {
             if indexPath.item == 0 {
-                vc.source = "google-news"
+                vc.source = "ign"
             } else if indexPath.item == 1 {
-                vc.source = "google-news"
+                vc.source = "polygon"
             }
         }
         self.present(vc, animated: true, completion: nil)
@@ -194,6 +192,6 @@ extension CategoriesVC: UICollectionViewDelegate, UICollectionViewDelegateFlowLa
     }
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
-        CellAnimator.animate(cell, withDuration: 0.5, animation: .Tilt)
+        //CellAnimator.animate(cell, withDuration: 0.5, animation: .Tilt)
     }
 }

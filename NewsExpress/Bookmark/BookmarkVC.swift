@@ -22,6 +22,9 @@ class BookmarkVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.btnBack.isHidden = true
+        self.imgBack.isHidden = true
+        
         self.collectionViewForEverything.delegate = self
         self.collectionViewForEverything.dataSource = self
         
@@ -35,7 +38,7 @@ class BookmarkVC: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
+     
     }
     
     @IBAction func tapBackBtn(_ sender: UIButton) {

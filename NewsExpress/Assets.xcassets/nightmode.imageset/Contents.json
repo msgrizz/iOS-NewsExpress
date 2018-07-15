@@ -2,12 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "icons8-bookmark-24-4.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icons8-bookmark-48-4.png",
+      "filename" : "half-moon-and-star.png",
       "scale" : "2x"
     },
     {
