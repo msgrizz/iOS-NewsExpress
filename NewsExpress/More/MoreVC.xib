@@ -285,7 +285,7 @@
         </view>
     </objects>
     <resources>
-        <image name="appLogo" width="512" height="512"/>
+        <image name="appLogo" width="1024" height="1024"/>
         <image name="back-white" width="96" height="96"/>
     </resources>
 </document>
